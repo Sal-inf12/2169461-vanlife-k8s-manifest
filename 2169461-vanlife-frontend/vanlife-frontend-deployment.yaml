@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vanlife-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vanlife-frontend
+  template:
+    metadata:
+      labels:
+        app: vanlife-frontend
+    spec:
+      containers:
+        - name: vanlife-frontend
+          image: salah212/vanlife-frontend:1.1
+          ports:
+            - containerPort: 80
