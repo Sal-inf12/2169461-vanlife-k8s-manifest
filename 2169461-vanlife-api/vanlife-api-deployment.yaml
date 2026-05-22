@@ -21,7 +21,7 @@ spec:
             - name: DB_HOST
               value: "10.10.3.6"
             - name: DB_PORT
-              value: "3307"
+              value: "3306"
             - name: DB_NAME
               value: "vanlife_db"
             - name: DB_USER
