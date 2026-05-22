@@ -25,8 +25,15 @@ spec:
             - name: DB_NAME
               value: "vanlife_db"
             - name: DB_USER
-              value: "vanlife_user"
+              valueFrom:
+                secretKeyRef:
+                  name: vanlife-db-secret
+                  key: DB_USER
+
             - name: DB_PASSWORD
-              value: "vanlife_password"
+              valueFrom:
+                secretKeyRef:
+                  name: vanlife-db-secret
+                  key: DB_PASSWORD
             - name: PORT
               value: "3000"
